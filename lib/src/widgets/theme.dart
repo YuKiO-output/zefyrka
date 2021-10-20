@@ -130,11 +130,13 @@ class ZefyrThemeData {
     }
 
     return ZefyrThemeData(
-      bold: TextStyle(fontWeight: FontWeight.bold),
-      italic: TextStyle(fontStyle: FontStyle.italic),
-      underline: TextStyle(decoration: TextDecoration.underline),
-      strikethrough: TextStyle(decoration: TextDecoration.lineThrough),
-      link: TextStyle(
+      bold: defaultStyle.style.copyWith(fontWeight: FontWeight.bold),
+      italic: defaultStyle.style.copyWith(fontStyle: FontStyle.italic),
+      underline:
+          defaultStyle.style.copyWith(decoration: TextDecoration.underline),
+      strikethrough:
+          defaultStyle.style.copyWith(decoration: TextDecoration.lineThrough),
+      link: defaultStyle.style.copyWith(
         color: themeData.colorScheme.secondary,
         decoration: TextDecoration.underline,
       ),
@@ -146,7 +148,7 @@ class ZefyrThemeData {
       heading1: TextBlockTheme(
         style: defaultStyle.style.copyWith(
           fontSize: 34.0,
-          color: defaultStyle.style.color!.withOpacity(0.70),
+          color: defaultStyle.style.color,
           height: 1.15,
           fontWeight: FontWeight.w300,
         ),
@@ -181,7 +183,10 @@ class ZefyrThemeData {
         lineSpacing: VerticalSpacing(top: 6, bottom: 2),
         decoration: BoxDecoration(
           border: Border(
-            left: BorderSide(width: 4, color: themeData.colorScheme.primary),
+            left: BorderSide(
+              width: 4,
+              color: themeData.colorScheme.primary,
+            ),
           ),
         ),
       ),
