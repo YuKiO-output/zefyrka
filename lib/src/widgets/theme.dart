@@ -153,18 +153,18 @@ class ZefyrThemeData {
         spacing: VerticalSpacing(top: 16.0, bottom: 0.0),
       ),
       heading2: TextBlockTheme(
-        style: TextStyle(
+        style: defaultStyle.style.copyWith(
           fontSize: 24.0,
-          color: defaultStyle.style.color!.withOpacity(0.70),
+          color: defaultStyle.style.color,
           height: 1.15,
           fontWeight: FontWeight.normal,
         ),
         spacing: VerticalSpacing(bottom: 0.0, top: 8.0),
       ),
       heading3: TextBlockTheme(
-        style: TextStyle(
+        style: defaultStyle.style.copyWith(
           fontSize: 20.0,
-          color: defaultStyle.style.color!.withOpacity(0.70),
+          color: defaultStyle.style.color,
           height: 1.25,
           fontWeight: FontWeight.w500,
         ),
