@@ -181,20 +181,20 @@ class ZefyrThemeData {
         lineSpacing: VerticalSpacing(top: 6, bottom: 2),
         decoration: BoxDecoration(
           border: Border(
-            left: BorderSide(width: 4, color: Colors.grey.shade300),
+            left: BorderSide(width: 4, color: themeData.colorScheme.primary),
           ),
         ),
       ),
       code: TextBlockTheme(
         style: TextStyle(
-          color: Colors.blue.shade900.withOpacity(0.9),
+          color: themeData.colorScheme.background,
           fontFamily: fontFamily,
           fontSize: 13.0,
           height: 1.15,
         ),
         spacing: baseSpacing,
         decoration: BoxDecoration(
-          color: Colors.grey.shade50,
+          color: themeData.colorScheme.primary,
           borderRadius: BorderRadius.circular(2),
         ),
       ),
