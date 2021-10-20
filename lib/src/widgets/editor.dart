@@ -34,12 +34,12 @@ typedef ZefyrEmbedBuilder = Widget Function(
 ///
 /// Only supports "horizontal rule" embeds.
 Widget defaultZefyrEmbedBuilder(BuildContext context, EmbedNode node) {
-  if (node.value.type == 'hr') {
+ if (node.value.type == 'hr') {
     final theme = ZefyrTheme.of(context)!;
     return Divider(
       height: theme.paragraph.style.fontSize! * theme.paragraph.style.height!,
       thickness: 2,
-      color: Colors.grey.shade200,
+      color: Theme.of(context).colorScheme.primary,
     );
   }
   throw UnimplementedError(
